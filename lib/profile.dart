@@ -11,9 +11,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0.0,
-        centerTitle: true,
+
         title: Text(
           "Profile",
           style: GoogleFonts.rubik(

@@ -1,3 +1,5 @@
+import 'package:codefactory_app/product_detail.dart';
+import 'package:codefactory_app/results.dart';
 import 'package:codefactory_app/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:codefactory_app/splash_screen.dart';
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const Home(),
+      home: const ProductDetail(),
     );
   }
 }
