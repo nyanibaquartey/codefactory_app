@@ -1,6 +1,7 @@
 import 'package:codefactory_app/product_detail.dart';
 import 'package:codefactory_app/results.dart';
 import 'package:codefactory_app/settings.dart';
+import 'package:codefactory_app/your_courses.dart';
 import 'package:flutter/material.dart';
 import 'package:codefactory_app/splash_screen.dart';
 import 'package:codefactory_app/home.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const ProductDetail(),
+      home: const YourCourses(),
     );
   }
 }
