@@ -49,7 +49,7 @@ class Results extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               SizedBox(
