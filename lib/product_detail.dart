@@ -1,3 +1,4 @@
+import 'package:codefactory_app/utils/main_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -30,7 +31,7 @@ class ProductDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
               Image.asset("assets/images/product_detail.png"),
             const Align(alignment: Alignment.bottomRight ,child: HomeCategoryCard(categoryText: "\$50")),
              const SizedBox(height: 16.0,),
@@ -87,29 +88,7 @@ class ProductDetail extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 53,),
-              SizedBox(
-                width: 309,
-                height: 56,
-                child: ElevatedButton(
-                  onPressed: () {
-
-                  },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xffe3562a),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16))),
-                  child: Text(
-                    "Add to cart",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.rubik(
-                        textStyle:
-                        Theme.of(context).textTheme.labelMedium,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16.0,
-                        color: Colors.white),
-                  ),
-                ),
-              ),
+              const MainButton(mainButtonText: 'Add to Cart',),
             ],
           ),
         )),
@@ -117,6 +96,7 @@ class ProductDetail extends StatelessWidget {
     );
   }
 }
+
 
 class HomeCategoryCard extends StatelessWidget {
   final String categoryText;
