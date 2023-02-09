@@ -2,6 +2,7 @@ import 'package:codefactory_app/course_lesson.dart';
 import 'package:codefactory_app/course_tests.dart';
 import 'package:codefactory_app/product_detail.dart';
 import 'package:codefactory_app/results.dart';
+import 'package:codefactory_app/results2.dart';
 import 'package:codefactory_app/settings.dart';
 import 'package:codefactory_app/test_question.dart';
 import 'package:codefactory_app/your_courses.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const TestQuestion(),
+      home: const Results2(),
     );
   }
 }
