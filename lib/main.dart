@@ -1,4 +1,5 @@
 import 'package:codefactory_app/course_lesson.dart';
+import 'package:codefactory_app/course_not_saved.dart';
 import 'package:codefactory_app/course_tests.dart';
 import 'package:codefactory_app/product_detail.dart';
 import 'package:codefactory_app/results.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const Results2(),
+      home: const CourseNotSaved(),
     );
   }
 }
