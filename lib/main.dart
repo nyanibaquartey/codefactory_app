@@ -1,6 +1,7 @@
 import 'package:codefactory_app/course_lesson.dart';
 import 'package:codefactory_app/course_not_saved.dart';
 import 'package:codefactory_app/course_tests.dart';
+import 'package:codefactory_app/no_payment.dart';
 import 'package:codefactory_app/product_detail.dart';
 import 'package:codefactory_app/results.dart';
 import 'package:codefactory_app/results2.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const CourseNotSaved(),
+      home: const NoPayment(),
     );
   }
 }
