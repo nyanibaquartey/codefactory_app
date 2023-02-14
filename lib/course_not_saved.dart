@@ -49,11 +49,11 @@ class CourseNotSaved extends StatelessWidget {
                     " Course not saved",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.rubik(
-                      textStyle: Theme.of(context).textTheme.headline4,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 24.0,
-                      color: const Color(0xFF3C3A36),
-                    ),
+                        textStyle: Theme.of(context).textTheme.headline4,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 24.0,
+                        color: const Color(0xFF3C3A36),
+                        height: 1.5),
                   ),
                 ),
                 const SizedBox(
