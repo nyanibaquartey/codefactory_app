@@ -7,15 +7,18 @@ import 'package:codefactory_app/slide_dot_indicator.dart';
 import 'package:codefactory_app/buttons/custom_flat_button.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({Key? key, this.buttonText}) : super(key: key);
+  final String? buttonText;
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  late PageController _controller;
+   PageController? _controller;
   int _slideIndex = 0;
+
+
 
   @override
   void initState() {
@@ -25,12 +28,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller!.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -84,31 +88,56 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
 
             //Slide navigation button
-            SizedBox(
-              width: 311,
-              height: 56,
-              child: ElevatedButton(
-                onPressed: () {
-                  _controller.nextPage(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.ease);
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffe3562a),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16))),
-                child: Text(
-                  "Next",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.rubik(
-                      textStyle: Theme.of(context).textTheme.labelMedium,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16.0,
-                      color: Colors.white),
-                ),
-              ),
+            CustomButton(
+              controller: _controller,
+              //set button text based on page
+              buttonText: _slideIndex == 2? "Lets Start" : "Next",
             ),
           ]),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    Key? key, this.buttonText, this.press,
+    required PageController? controller,
+  }) : _controller = controller, super(key: key);
+  final String? buttonText;
+  final Function()? press;
+
+  final PageController? _controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 311,
+      height: 56,
+      child: ElevatedButton(
+        onPressed: () {
+          //routing of screens; route to login page if on last screen
+          if(_controller!.page == 2){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
+          }
+
+          _controller!.nextPage(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.ease);
+        },
+        style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xffe3562a),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16))),
+        child: Text(
+          buttonText!,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.rubik(
+              textStyle: Theme.of(context).textTheme.labelMedium,
+              fontWeight: FontWeight.w500,
+              fontSize: 16.0,
+              color: Colors.white),
         ),
       ),
     );

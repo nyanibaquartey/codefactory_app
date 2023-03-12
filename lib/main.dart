@@ -3,6 +3,7 @@ import 'package:codefactory_app/course_not_saved.dart';
 import 'package:codefactory_app/course_tests.dart';
 import 'package:codefactory_app/no_payment.dart';
 import 'package:codefactory_app/course_not_found.dart';
+import 'package:codefactory_app/onboarding_screen.dart';
 import 'package:codefactory_app/payment.dart';
 import 'package:codefactory_app/product_detail.dart';
 import 'package:codefactory_app/results.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Factory',
 theme: ThemeData.light(),
-      home: const CourseNotFound(),
+      home: const OnboardingScreen(),
     );
   }
 }
