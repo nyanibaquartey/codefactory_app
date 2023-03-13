@@ -79,7 +79,10 @@ class Settings extends StatelessWidget {
             ),
 
         ),
-      )),
+      ),
+
+      ),
+
     );
   }
 }
