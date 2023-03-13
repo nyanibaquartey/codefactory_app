@@ -1,5 +1,5 @@
+import 'package:codefactory_app/custom_navbar.dart';
 import 'package:codefactory_app/forgot_password.dart';
-import 'package:codefactory_app/profile.dart';
 import 'package:codefactory_app/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +31,7 @@ class _LoginState extends State<Login> {
         child: Form(
           key: _formKey,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 28.0),
+            padding: const EdgeInsets.all(28),
             child: SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: const BoxConstraints(),
@@ -136,7 +136,7 @@ class _LoginState extends State<Login> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Profile()));
+                                  builder: (context) => const CustomBottomNavBar()));
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xffe3562a),
