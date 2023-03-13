@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
 
     //simulate delay before moving on to signup screen
     Future.delayed(
-        const Duration(seconds: 4),
+        const Duration(seconds: 3),
         () => Navigator.push(
             context, MaterialPageRoute(builder: (context) => const OnboardingScreen())));
     return Scaffold(
@@ -22,14 +22,14 @@ class SplashScreen extends StatelessWidget {
         child: Stack(
          children: [
            Center(child: Image.asset('assets/images/splash_img.png')),
-           const Align(
+         /*  const Align(
              alignment: Alignment.bottomCenter,
              child: CircularProgressIndicator(
                color: Colors.green,
              // valueColor: AlwaysStoppedAnimation(Colors.deepOrangeAccent),
               // backgroundColor: Colors.yellow,
              ),
-           ),
+           ),*/
 
          ],
         ),
