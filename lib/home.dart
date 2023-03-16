@@ -113,6 +113,7 @@ class Home extends StatelessWidget {
                 height: 12,
               ),
                CourseCard(
+                 optionalWidget: const Align(),
                 homeCourseCardImage: "assets/images/home1.png",
                 courseDuration: "3 h 30 min",
                 courseName: "UI",
@@ -123,6 +124,7 @@ class Home extends StatelessWidget {
                 height: 12,
               ),
                CourseCard(
+                 optionalWidget: const Align(),
                 homeCourseCardImage: "assets/images/home2.png",
                 courseDuration: "3 h 30 min",
                 courseName: "HTML",

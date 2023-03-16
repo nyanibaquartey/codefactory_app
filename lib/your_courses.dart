@@ -35,7 +35,7 @@ class YourCourses extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               CourseCard(
-                optionalWidget: Align(),
+                optionalWidget: const Align(),
                 homeCourseCardImage: "assets/images/yourcourses1.png",
                 courseDuration: "Left 1 h 20 min ",
                 courseName: "Swift",
@@ -46,7 +46,7 @@ class YourCourses extends StatelessWidget {
                 height: 12,
               ),
               CourseCard(
-                optionalWidget: Align(),
+                optionalWidget: const Align(),
                 homeCourseCardImage: "assets/images/yourcourses2.png",
                 courseDuration: "Left 1 h 20 min ",
                 courseName: "Scrum",
@@ -57,7 +57,7 @@ class YourCourses extends StatelessWidget {
                 height: 12,
               ),
               CourseCard(
-                optionalWidget: Align(),
+                optionalWidget: const Align(),
                 homeCourseCardImage: "assets/images/yourcourses3.png",
                 courseDuration: "Left 1 h 20 min ",
                 courseName: "HTML",

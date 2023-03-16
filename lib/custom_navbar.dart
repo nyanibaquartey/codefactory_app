@@ -1,3 +1,4 @@
+import 'package:codefactory_app/home.dart';
 import 'package:codefactory_app/profile.dart';
 import 'package:codefactory_app/settings.dart';
 import 'package:codefactory_app/your_courses.dart';
@@ -18,6 +19,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   Widget build(BuildContext context) {
 
     List<Widget> screens = [
+      const Home(),
       const YourCourses(),
       const Profile(),
       const Settings()
@@ -32,6 +34,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     return Scaffold(
       body: screens[_selectedItem],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         onTap: onTapItem,
           currentIndex: _selectedItem,
           selectedItemColor: Colors.deepOrangeAccent,
@@ -39,6 +42,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           showUnselectedLabels: true,
           elevation: 10,
           items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
         BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: "Courses"),
         BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings")

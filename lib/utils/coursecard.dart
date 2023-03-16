@@ -7,7 +7,7 @@ class CourseCard extends StatelessWidget {
   final String courseName;
   final String courseDesc;
   final int colour;
-  Widget? optionalWidget;
+  Widget optionalWidget;
 
   CourseCard({
     Key? key,
@@ -16,7 +16,7 @@ class CourseCard extends StatelessWidget {
     required this.courseName,
     required this.courseDesc,
     required this.colour,
-    this.optionalWidget,
+  required this.optionalWidget,
   }) : super(key: key);
 
   @override
@@ -54,7 +54,7 @@ class CourseCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  optionalWidget!,
+               optionalWidget,
                   Text(
                     courseDuration,
                     style: GoogleFonts.rubik(
